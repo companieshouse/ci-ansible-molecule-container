@@ -11,10 +11,10 @@ The scripts have been developed and tested using:
 
 The container has been built with the following versions installed on it:
 
-Name                    | Description                                                          | Example
------------------------ | -------------------------------------------------------------------- | ------------
-ansible_version         | Ansible version installed on the container                           | 2.9.10
-molecule_version          | Molecule version installed on the container                        | 3.0.7
+Name                    | Version     
+----------------------- | ------------
+Ansible                 | 2.9.10      
+Molecule                | 3.0.7       
 
 ## Versioning
 

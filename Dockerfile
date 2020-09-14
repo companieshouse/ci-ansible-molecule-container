@@ -1,7 +1,8 @@
 FROM centos:8
-ENV container docker
+
 ARG ANSIBLE_VERSION=2.9.10
 ARG MOLECULE_VERSION=3.0.7
+ARG YUM_REPOSITORY=yum-repository.platform.aws.chdev.org
 
 RUN yum install -y epel-release \
                 openssh-clients \
@@ -18,7 +19,7 @@ RUN pip3 install ansible==${ANSIBLE_VERSION} \
                  molecule[docker] \
                  molecule==${MOLECULE_VERSION}
 
-RUN rpm --import http://yum-repository.platform.aws.chdev.org/RPM-GPG-KEY-platform-noarch && \
+RUN rpm --import http://${YUM_REPOSITORY}/RPM-GPG-KEY-platform-noarch && \
     yum install -y yum-utils && \
     yum-config-manager --add-repo http://yum-repository.platform.aws.chdev.org/platform-noarch.repo && \
     yum install -y platform-tools-common && \

@@ -21,7 +21,7 @@ RUN pip3 install ansible==${ANSIBLE_VERSION} \
 
 RUN rpm --import http://${YUM_REPOSITORY}/RPM-GPG-KEY-platform-noarch && \
     yum install -y yum-utils && \
-    yum-config-manager --add-repo http://yum-repository.platform.aws.chdev.org/platform-noarch.repo && \
+    yum-config-manager --add-repo http://${YUM_REPOSITORY}/platform-noarch.repo && \
     yum install -y platform-tools-common && \
     yum clean all
 

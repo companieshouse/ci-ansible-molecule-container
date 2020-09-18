@@ -4,6 +4,9 @@ ARG ANSIBLE_VERSION=2.9.10
 ARG MOLECULE_VERSION=3.0.7
 ARG YUM_REPOSITORY=yum-repository.platform.aws.chdev.org
 
+COPY docker-launcher /usr/bin/docker-launcher
+RUN chmod 500 /usr/bin/docker-launcher
+
 RUN yum install -y epel-release \
                 openssh-clients \
                 git \

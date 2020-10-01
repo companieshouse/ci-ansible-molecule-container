@@ -10,6 +10,7 @@ RUN chmod 500 /usr/bin/docker-launcher
 RUN yum install -y epel-release \
                 openssh-clients \
                 git \
+                iptables \
                 sudo \
                 python3-pip && \
                 alternatives --set python /usr/bin/python3

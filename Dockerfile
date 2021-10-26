@@ -11,6 +11,8 @@ RUN yum install -y epel-release \
                 git && \
                 alternatives --set python /usr/bin/python3
 
+RUN python -m pip install --upgrade pip
+
 RUN pip3 install ansible==${ANSIBLE_VERSION} \
                  boto \
                  boto3 \

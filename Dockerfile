@@ -7,7 +7,8 @@ ARG YUM_REPOSITORY=yum-repository.platform.aws.chdev.org
 RUN yum install -y epel-release \
                 openssh-clients \
                 iptables \
-                python3-pip && \
+                python3-pip \
+                git && \
                 alternatives --set python /usr/bin/python3
 
 RUN pip3 install ansible==${ANSIBLE_VERSION} \

@@ -1,5 +1,5 @@
 ARG IMAGE_VERSION="latest"
-FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-core-runtime:${IMAGE_VERSION}
+FROM 416670754337.dkr.ecr.eu-west-2.amazonaws.com/ci-core-runtime:latest
 
 ARG ANSIBLE_VERSION=2.15.6
 ARG MOLECULE_VERSION=6.0.2

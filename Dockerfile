@@ -9,7 +9,7 @@ RUN dnf install -y openssh-clients \
                 git \
                 docker
 
-RUN pip3 install ansible=='8.7.0' \
+RUN pip3 install ansible-core=='2.15.6' \
                  ansible-lint \
                  boto \
                  boto3 \

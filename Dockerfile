@@ -10,6 +10,7 @@ RUN dnf install -y openssh-clients \
                 docker
 
 RUN pip3 install ansible-core=='2.15.6' \
+                 ansible \
                  ansible-lint \
                  boto \
                  boto3 \

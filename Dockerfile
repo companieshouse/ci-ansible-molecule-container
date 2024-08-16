@@ -9,13 +9,14 @@ RUN dnf install -y openssh-clients \
                 git \
                 docker
 
-RUN pip3 install ansible\
+RUN pip3 install ansible \
+                 ansible-lint \
                  boto \
                  boto3 \
                  dnspython \
                  netaddr \
                  molecule[docker] \
-                 molecule\
+                 molecule \
                  pywinrm
 
 RUN rpm --import http://yum-repository.platform.aws.chdev.org/RPM-GPG-KEY-platform-noarch && \

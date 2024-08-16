@@ -5,19 +5,21 @@ ARG MOLECULE_VERSION=6.0.2
 ARG YUM_REPOSITORY=yum-repository.platform.aws.chdev.org
 
 RUN dnf install -y openssh-clients \
-                python3-pip \
-                git \
-                docker
+    python3-pip \
+    git \
+    docker
 
 RUN pip3 install ansible-core=='2.15.6' \
-                 ansible-lint \
-                 boto \
-                 boto3 \
-                 dnspython \
-                 netaddr \
-                 molecule[docker] \
-                 molecule \
-                 pywinrm
+    ansible \
+    ansible-lint \
+    boto \
+    boto3 \
+    dnspython \
+    netaddr \
+    molecule[docker] \
+    molecule \
+    pywinrm && \
+    python3 -m pip cache purge
 
 RUN rpm --import http://yum-repository.platform.aws.chdev.org/RPM-GPG-KEY-platform-noarch && \
     yum install -y yum-utils && \

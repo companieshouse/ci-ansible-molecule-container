@@ -7,7 +7,8 @@ ARG YUM_REPOSITORY=yum-repository.platform.aws.chdev.org
 RUN dnf install -y openssh-clients \
     python3-pip \
     git \
-    docker
+    docker \
+    findutils
 
 RUN pip3 install ansible-core=='2.15.6' \
     ansible \

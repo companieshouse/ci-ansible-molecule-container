@@ -19,6 +19,7 @@ RUN pip3 install ansible-core=='2.15.6' \
     netaddr \
     molecule[docker] \
     molecule \
+    hvac\
     pywinrm && \
     python3 -m pip cache purge
 

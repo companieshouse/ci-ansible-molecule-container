@@ -8,7 +8,8 @@ RUN dnf install -y openssh-clients \
     python3-pip \
     git \
     docker \
-    findutils
+    findutils \
+    unzip
 
 RUN pip3 install ansible-core=='2.15.6' \
     ansible \
@@ -19,7 +20,8 @@ RUN pip3 install ansible-core=='2.15.6' \
     netaddr \
     molecule[docker] \
     molecule \
-    hvac\
+    hvac \
+    passlib \
     pywinrm && \
     python3 -m pip cache purge
 

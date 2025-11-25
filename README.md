@@ -23,4 +23,4 @@ The images are built and tagged with Concourse and have the following prefix:
 ```
 ansible-2.9.10-molecule-3.0.7-<CONTAINER_VERSION>
 ```
-The `CONTAINER_VERSION` follows the semantic versioning approach.
+The `CONTAINER_VERSION` follows the semantic versioning approach. 

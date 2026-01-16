@@ -8,11 +8,19 @@ RUN sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
     sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* && \
     dnf update -y && \
     dnf install -y \
+        centos-release-stream && \
+    sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
+    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* && \
+    dnf swap -y centos-{linux,stream}-repos && \
+    sed -i 's/mirrorlist/#mirrorlist/g' /etc/yum.repos.d/CentOS-* && \
+    sed -i 's|#baseurl=http://mirror.centos.org|baseurl=http://vault.centos.org|g' /etc/yum.repos.d/CentOS-* && \
+    dnf -y distro-sync && \
+    dnf install -y \
         epel-release-8 \
-        git-2.27.0 \
-        iptables-1.8.4 \
+        git-2.43.0 \
+        iptables-1.8.5 \
         openssh-clients-8.0p1 \
-        python38-3.8.8 \
+        python38-3.8.17 \
         python38-pip-19.3.1 \
         yum-utils-4.0.21 && \
     dnf clean all && \

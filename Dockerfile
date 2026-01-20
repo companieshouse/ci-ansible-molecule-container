@@ -27,7 +27,7 @@ RUN python -m pip install --no-cache-dir --upgrade \
         molecule==${MOLECULE_VERSION}
 
 RUN yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo && \
-    dnf install --setopt sslverify=0 -y --nobest \
+    dnf install -y --nobest \
         docker-ce-26.1.3 && \
     dnf clean all
 

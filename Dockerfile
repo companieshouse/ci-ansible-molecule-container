@@ -21,6 +21,7 @@ RUN python3.11 -m pip install --no-cache-dir \
         boto3==1.42.32 \
         botocore==1.42.32 \
         dnspython==2.8.0 \
+        lxml==5.3.0 \
         netaddr==1.3.0 \
         molecule[docker]==${MOLECULE_VERSION} \
         molecule==${MOLECULE_VERSION} \

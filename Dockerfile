@@ -26,8 +26,10 @@ RUN python3.11 -m pip install --no-cache-dir \
         molecule[docker]==${MOLECULE_VERSION} \
         molecule==${MOLECULE_VERSION} \
         hvac==2.4.0 \
+        netapp-lib==2021.6.25 \
         passlib==1.7.4 \
-        pywinrm==0.5.0
+        pywinrm==0.5.0 \
+        requests==2.32.5
 
 RUN rpm --import http://yum-repository.platform.aws.chdev.org/RPM-GPG-KEY-platform-noarch && \
     yum-config-manager --add-repo http://yum-repository.platform.aws.chdev.org/platform-noarch.repo && \
